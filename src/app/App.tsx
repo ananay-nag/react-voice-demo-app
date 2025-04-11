@@ -94,7 +94,7 @@ function App() {
       ...formData,
       answers: updatedAnswers,
     });
-    setErrors({activeRecordingError : ""});
+    setErrors({ activeRecordingError: "" });
   };
 
   const handleTextAnswerChange = (index: number, value: string) => {
@@ -289,17 +289,6 @@ function App() {
                     />
                   </div>
                 )}
-
-                {/* Show "recording in progress" message for other questions */}
-                {activeVoiceQuestionIndex !== null &&
-                  activeVoiceQuestionIndex !== index && (
-                    <div className="recording-message">
-                      <p>
-                        Recording in progress for Question{" "}
-                        {activeVoiceQuestionIndex + 1}
-                      </p>
-                    </div>
-                  )}
 
                 <br />
                 <RecordingStatus
